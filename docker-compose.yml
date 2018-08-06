@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  mysql-api:
+    image: mysql:5.7
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 500M
+        reservations:
+          cpus: '0.25'
+          memory: 200M
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: differ
+      MYSQL_DATABASE: differ
+      MYSQL_USER: differ
+      MYSQL_PASSWORD: differ
