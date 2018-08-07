@@ -1,11 +1,15 @@
 package com.waes.differ.api.resource;
 
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.waes.differ.api.util.diff.resource.DifferencesResource;
 
 public class DiffOutcomeResource {
 
     private String message;
+
+    @JsonUnwrapped
     private DifferencesResource differences;
+
     private DiffableResource diffable;
 
     public DiffOutcomeResource(DiffableResource diffable, String message) {
