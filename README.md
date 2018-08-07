@@ -68,3 +68,9 @@ Then launch Spring Boot's jar:
 ```
 java -jar api/build/libs/api-0.0.1-SNAPSHOT.jar
 ```
+
+#### Integration tests
+
+To run integration tests, one must first launch the database using docker-compose as described above. Once it's up and running, use:
+
+`./gradlew clean build integrationTest`
